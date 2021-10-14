@@ -15,7 +15,7 @@
 - Use a [Procfile](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/python-configuration-procfile.html). It configs the WSGI server for your application.
 - In the `Procfile`, modify the web attribute to make gunicorn accept a different `WSGI_APP` argument. e.g. `web: gunicorn --bind :8000 --workers 3 --threads 2 app:app`.
 
-## Why use zip -r -X <your_archive_name>.zip * in the base directory?
+## Why use `zip -r -X <your_archive_name>.zip *` in the base directory?
 - So the archive will not wrap application files with an additional folder.
 - Otherwise Elastic Beanstalk will not find your application.
 
